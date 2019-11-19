@@ -1,18 +1,22 @@
 <template>
   <div class="home">
-    <h1>Todos</h1>
+    <TodoList />
   </div>
 </template>
 
 <script>
 import router from "../router";
+import TodoList from "../components/TodoList";
+
 export default {
   name: "home",
-  components: {},
+  components: {
+    TodoList
+  },
   methods: {
     checkLoggedIn() {
       this.$session.start();
-      if (this.$session.has("jwt")) {
+      if (!this.$session.has("jwt")) {
         // 로그인 페이지로 리다이렉트
         router.push("/login");
       }
