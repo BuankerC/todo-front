@@ -1,15 +1,17 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import auth from './modules/auth.js'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+  // vue에서 data
+  state: {},
+  // vue에서 methodes
+  mutations: {},
+  // vue에서 methods들을 묶어놓음
+  actions: {},
   modules: {
+    auth,
   }
 })
